@@ -25,9 +25,11 @@ class Block {
   	// 
   	generateHash() {
       	// Use this to create a temporary reference of the class object
-      	let self = this;
+          this.hash = SHA256(JSON.stringify(this))
         //Implement your code here
-        
+        return new Promise((resolve) => {
+            resolve(this)
+        })
     }
 }
 
